@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deadslots</title>
+    <script>
+        /*function spin(e) {
+            'use strict';
+            if (typeof e == 'undefined') e = window.event;
+            if (error) e.preventDefault();
+            return false;
+        }
+        window.onload = function() {
+            'use strict';
+            var form = document.getElementById("slotForm");
+            form.addEventListener("submit", spin, false);
+            spin();
+        };
+
+        function submit(R) {
+            'use strict'
+        }
+      // math.floor((Math.random()* 10) +1);*/
+
+     /*  var Deadpool =
+                [   "Images/TACO.png",
+                    "Images/sniff.jpg",
+                    "Images/deadpool.jpeg"
+
+        ];*/
+
+
+
+        Deadpool = new Array(3);
+
+          Deadpool[0] = new Image();
+          Deadpool[0].src = "deadpool%20slots/Deadpool.jpg";
+          Deadpool[1] = new Image();
+          Deadpool[1].src = "deadpool%20slots/sniff.jpg";
+          Deadpool[2] = new Image();
+          Deadpool[2].src = "deadpool%20slots/TACO.png";
+
+
+
+
+
+        function spin(e) {
+            'use strict';
+            var cell1 = document.getElementById("cell1");
+            var RanNumber1 = Math.floor((Math.random() * 3), + 0);      //1. randomly
+            //  generate number from one to nine
+
+            cell1.src = Deadpool[RanNumber1]; // placed
+
+
+            var cell2 = document.getElementById("cell2");
+            var RanNumber2 = Math.floor((Math.random() * 3), + 0);
+             cell2.src = Deadpool[RanNumber2];
+
+            var cell3 = document.getElementById("cell3");
+            var RanNumber3 = Math.floor((Math.random() * 3), +0 );
+             cell3.src = Deadpool[RanNumber3];
+
+            if (typeof e == 'undefined') e = window.event;
+           if (error) e.preventDefault();
+       return false;
+   }
+       window.onload = function() {
+           'use strict';
+       var form = document.getElementById("deadpool%20slots");
+       form.addEventListener("submit", spin, false);
+       spin(e);
+
+        };
+       </script>
+
+</head>
+
+<style>
+    
+    h2{
+        color: #33001e;
+    }
+    h3{
+        color: white;
+    }
+    label{
+        color: #000;
+    }
+
+
+</style>
+
+<body bgcolor="#d3d3d3"/>
+<div align="center">
+    <h2  color="">DeadSlots</h2>
+    <form action="#" id="slotForm" method="post" onsubmit="event.preventDefault(); spin(e);">
+        <table align="center" border="3" bgcolor="red">
+            <tr>
+                <td  height="200" width="200">
+                    <img src="deadpool%20slots/deadpool.jpeg"height="200" width="200" id="cell1" >
+
+                </td>
+
+                <td  height="200" width="200"><img src="deadpool%20slots/deadpool.jpeg"height="200" width="200" id="cell2"></td>
+                <td  height="200" width="200"><img src="deadpool%20slots/deadpool.jpeg"height="200" width="200" id="cell3"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" id="submit" value="spin" onclick="spin()">
+        <br><br>
+        <label  id="win">Give cash, spin, do it again!!!</label>
+    </form>
+
+    <h3>Payouts!!!F*@#(Your not suppose to win)</h3>
+    <table>
+        <tr><td height="40" width="40" bgcolor="red"><img src="deadpool%20slots/deadpool.jpeg"height="200" width="200" ></td>
+            <td height="40" width="40" bgcolor="red"><img src="deadpool%20slots/deadpool.jpeg" height="200" width="200"></td>
+            <td height="40" width="40" bgcolor="red"><img src="deadpool%20slots/deadpool.jpeg" height="200" width="200"></td>
+            <td>100 credits</td>
+        </tr>
+        <tr><td height="40" width="40" bgcolor="black"><img src="deadpool%20slots/sniff.jpg" height="200" width="200"></td>
+            <td height="40" width="40" bgcolor="white"><img src="deadpool%20slots/TACO.png" height="200" width="200"></td>
+            <td height="40" width="40" bgcolor="black"><img src="deadpool%20slots/sniff.jpg" height="200" width="200" ></td>
+            <td>50 credits</td>
+        </tr>
+        <tr><td  height="40" width="40"bgcolor="red"><img src="deadpool%20slots/deadpool.jpeg" height="200" width="200"></td>
+            <td height="40" width="40" bgcolor="black"><img src="deadpool%20slots/sniff.jpg" height="200" width="200"></td>
+            <td height="40" width="40" bgcolor="red"><img src="deadpool%20slots/deadpool.jpeg" height="200" width="200" ></td>
+            <td>10 credits</td>
+        </tr>
+
+
+
+
+
+    </table>
+</div>
+</body>
+</html>
